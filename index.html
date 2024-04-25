@@ -2,14 +2,1517 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
     <title>Santoriello Rémy</title>
+
+    <!-- HOSTED CSS -->
+    <style media="all" data-href="fonts/mdi/css/materialdesignicons.min.css">
+        /* MaterialDesignIcons.com */
+        @font-face{
+            font-family:"Material Design Icons";
+            src:url("./static/fonts/mdi/materialdesignicons-webfont.eot?v=1.5.54");
+            src:url("./static/fonts/mdi/materialdesignicons-webfont.eot?#iefix&v=1.5.54") format("embedded-opentype"),
+                url("./static/fonts/mdi/materialdesignicons-webfont.woff2?v=1.5.54") format("woff2"),
+                url("./static/fonts/mdi/materialdesignicons-webfont.woff?v=1.5.54") format("woff"),
+                url("./static/fonts/mdi/materialdesignicons-webfont.ttf?v=1.5.54") format("truetype"),
+                url("./static/fonts/mdi/materialdesignicons-webfont.svg?v=1.5.54#materialdesigniconsregular") format("svg");
+            font-weight:normal;
+            font-style:normal}.mdi{display:inline-block;
+            font:normal normal normal 24px/1 "Material Design Icons";
+            font-size:inherit;
+            text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+            transform:translate(0, 0)
+        }
+        .mdi-chevron-double-up:before{content:"\F13F"}
+        .mdi-chevron-left:before{content:"\F141"}
+        .mdi-chevron-right:before{content:"\F142"}
+        .mdi-close:before{content:"\F156"}
+        .mdi-open-in-new:before{content:"\F3CC"}
+        .mdi-menu:before{content:"\F35C"}
+        .mdi-linkedin:before{content:"\F33B"}
+        .mdi-github-box:before{content:"\F2A3"}
+        .mdi-arrow-down:before{content:"\F045"}
+        .mdi-arrow-right:before{content:"\F054"}
+        
+</style>
+
+    <!-- LOCAL CSS -->
+    <style media="" data-href="./static/css/index.css">@font-face {
+        font-family: "Ubuntu";
+        src: url("./static/fonts/Ubuntu/Ubuntu-Regular.ttf");
+      }
+      @font-face {
+      font-family: "Ubuntu-Medium";
+      src: url("./static/fonts/Ubuntu/Ubuntu-Medium.ttf");
+      }
+      @font-face {
+        font-family: "Ubuntu-bold";
+        src: url("./static/fonts/Ubuntu/Ubuntu-Bold.ttf");
+      }
+      @keyframes fadeIn {
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes flipInX {
+        from {
+          -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+          opacity: 0;
+          -webkit-transform: perspective(400px) rotateY(90deg);
+          transform: perspective(400px) rotateY(90deg);
+        }
+        40% {
+          -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+          -webkit-transform: perspective(400px) rotateY(-20deg);
+          transform: perspective(400px) rotateY(-20deg);
+        }
+        60% {
+          opacity: 1;
+          -webkit-transform: perspective(400px) rotateY(10deg);
+          transform: perspective(400px) rotateY(10deg);
+        }
+        80% {
+          -webkit-transform: perspective(400px) rotateY(-5deg);
+          transform: perspective(400px) rotateY(5deg);
+        }
+        to {
+          opacity: 1;
+          -webkit-transform: perspective(400px);
+          transform: perspective(400px);
+        }
+      }
+      @keyframes popDown {
+        0% {
+          transform: translateY(-100px);
+        }
+      }
+      @keyframes slideUp {
+        0% {
+          transform: translateY(300px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes slideDown {
+        0% {
+          transform: translateY(-300px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes slideInLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(-300px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes slideInRight {
+        0% {
+          opacity: 0;
+          transform: translateX(300px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes toBottomFromTop {
+        49% {
+          transform: translateY(100%);
+        }
+        50% {
+          opacity: 0;
+          transform: translateY(-100%);
+        }
+        51% {
+          opacity: 1;
+        }
+      }
+      @keyframes popIn {
+        0% {
+          transform: scale(0);
+        }
+        60% {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+        80% {
+          transform: scale(0.95);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      
+      body {
+        color: #fff;
+        font-family: "Ubuntu";
+        font-size: 8pt;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin: 0px;
+        overflow-x: hidden;
+        text-align: center;
+      }
+      
+      .error {
+        color: red;
+      }
+      
+      .me {
+        /* clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%); */
+        border-radius: 50%;
+        background: url("./media/img/me.png");
+        height: 250px;
+        width: 250px;
+        background-size: contain;
+      }
+      
+      #preload {
+        display: none;
+      }
+      
+      .page-link {
+        cursor: pointer;
+      }
+      
+      .disable-hover {
+        pointer-events: none;
+      }
+      
+      .overflow-wrap {
+        overflow-x: hidden;
+      }
+      
+      .canvas {
+        background: url("media/img/filler.png") center center/cover;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+      }
+      
+      .button {
+        border: 2px solid #fff;
+        box-sizing: inherit;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 13pt;
+        padding: 10px 20px;
+        transition: all 0.5s;
+      }
+      .button:hover {
+        background-color: #04c2c9;
+        border-color: #04c2c9;
+      }
+      .button .mdi {
+        vertical-align: middle;
+      }
+      
+      .bold {
+        font-family: "Ubuntu-bold";
+      }
+      
+      .flex {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .flex.row {
+        flex-direction: row;
+      }
+      .flex.wrap {
+        flex-wrap: wrap;
+      }
+      
+      .hex-wrap {
+        display: inline-block;
+        height: 80px;
+        position: relative;
+        text-align: center;
+        width: 80px;
+      }
+      
+      .hexagon {
+        background-color: #04c2c9;
+        display: inline-block;
+        height: 100%;
+        width: 57.735%;
+      }
+      
+      .hexagon:before {
+        background-color: inherit;
+        content: "";
+        height: inherit;
+        position: absolute;
+        right: 21.1325%;
+        top: 0;
+        transform: rotateZ(60deg);
+        width: inherit;
+      }
+      
+      .hexagon:after {
+        background-color: inherit;
+        content: "";
+        height: inherit;
+        position: absolute;
+        right: 21.1325%;
+        top: 0;
+        transform: rotateZ(-60deg);
+        width: inherit;
+      }
+      
+      .highlight {
+        color: #04c2c9;
+      ;
+      }
+      
+      .header {
+        color: #444649;
+        font-family: "Ubuntu-bold";
+        font-size: 25pt;
+        position: relative;
+        position: relative;
+      }
+      
+      .header-bar {
+        background: #444649;
+        height: 4px;
+        margin: 25px 0 75px 0;
+        width: 70px;
+      }
+      
+      .label {
+        font-size: 14pt;
+        font-weight: 500;
+      }
+      
+      .resume {
+        background: #455261;
+        height: 100px;
+      }
+      
+      nav {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        background: #1b242f;
+        border-bottom: 3px solid #04c2c9;
+        height: 50px;
+        text-align: left;
+        width: 100%;
+        z-index: 99;
+      }
+      nav.fixed {
+        bottom: inherit;
+        left: 0;
+        position: fixed;
+        top: 0;
+      }
+      nav.fixed.desk {
+        animation: popDown 0.5s;
+      }
+      nav .link-wrap {
+        background: #333;
+        height: 0;
+        max-width: 1200px;
+        overflow: hidden;
+        position: absolute;
+        top: 53px;
+        transition: height 0.3s ease-out;
+        width: 100%;
+      }
+      nav .link-wrap.visible {
+        height: 220px;
+      }
+      nav .link-wrap div {
+        cursor: pointer;
+        font-size: 12pt;
+        padding: 12px 20px;
+        text-transform: uppercase;
+        transition: color 0.5s;
+      }
+      nav .link-wrap div:first-child {
+        padding: 25px 20px 12px 20px;
+      }
+      nav .link-wrap div:hover {
+        color: #37f4fb;
+      }
+      nav .mdi-menu {
+        font-size: 30pt;
+        line-height: 36pt;
+        margin: auto 0;
+        position: absolute;
+        right: 5vw;
+        top: 0;
+      }
+      nav .active {
+        color: #37f4fb;
+      }
+      
+      .carousel-wrap {
+        height: 250px;
+        margin: 0 auto;
+        position: relative;
+      }
+      
+      .window {
+        background: #222;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      #carousel {
+        position: relative;
+        top: 0;
+        width: 10000px;
+      }
+      
+      .slide {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        float: left;
+        height: 250px;
+        justify-content: center;
+      }
+      
+      .mdi-chevron-left,
+      .mdi-chevron-right {
+        background: rgba(0, 0, 0, 0.3);
+        bottom: 0;
+        color: #fff;
+        cursor: pointer;
+        cursor: pointer;
+        font-size: 14pt !important;
+        font-weight: bold;
+        padding: 10px 15px;
+        position: absolute;
+      }
+      
+      .mdi-chevron-left {
+        left: 0;
+      }
+      
+      .mdi-chevron-right {
+        right: 0;
+      }
+      
+      .transition {
+        transition: 0.7s;
+      }
+      
+      .modal-wrap {
+        height: 100vh;
+        pointer-events: none;
+        position: fixed;
+        width: 100vw;
+        z-index: 100;
+      }
+      .modal-wrap .mask {
+        background: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        transition: opacity 0.3s;
+        width: 100%;
+      }
+      .modal-wrap .modal {
+        align-items: flex-start;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        box-sizing: border-box;
+        color: #333;
+        height: 100vh;
+        opacity: 0;
+        position: relative;
+        text-align: left;
+        transform: scale(0.8);
+        transition: all 0.3s;
+      }
+      .modal-wrap .close {
+        bottom: 25px;
+        color: #bbb;
+        cursor: pointer;
+        font-size: 20pt;
+        font-weight: 800;
+        position: absolute;
+        right: 10px;
+      }
+      .modal-wrap .info-box {
+        border-top: 3px solid #1b242f;
+        box-sizing: border-box;
+        color: #444;
+        padding: 15px 10px 85px 10px;
+      }
+      .modal-wrap .title {
+        font-family: "Ubuntu-bold";
+        font-size: 16pt;
+        line-height: 20pt;
+      }
+      .modal-wrap .tag {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        color: #c0c0c0;
+        display: block;
+        font-family: "Ubuntu-bold";
+        font-size: 8pt;
+        font-weight: 300;
+        padding-bottom: 15px;
+      }
+      .modal-wrap .detail {
+        font-size: 9pt;
+        line-height: 14pt;
+        margin-top: 13px;
+      }
+      .modal-wrap .mdi-open-in-new {
+        font-size: 11pt;
+        left: -10px;
+        position: relative;
+      }
+      .modal-wrap .button {
+        background: #e31b6d;
+        border: 0;
+        bottom: 20px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 10pt;
+        font-weight: 600;
+        left: 10px;
+        padding: 11px 30px;
+        pointer-events: none;
+        position: absolute;
+        transition: all 0.5s;
+        visibility: hidden;
+      }
+      .modal-wrap .button.visible {
+        pointer-events: initial;
+        visibility: visible;
+      }
+      .modal-wrap .button:hover {
+        background: #fff;
+        color: #e31b6d;
+      }
+      .modal-wrap .carousel {
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+      }
+      .modal-wrap.visible {
+        pointer-events: initial;
+      }
+      .modal-wrap.visible .modal {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .modal-wrap.visible .mask {
+        opacity: 1;
+      }
+      
+      section {
+        color: #616161;
+        line-height: 11pt;
+        padding: 70px 0 70px 0;
+        position: relative;
+      }
+      section .container {
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 0 10px;
+        width: 100%;
+      }
+      section:nth-of-type(1) {
+        color: #fff;
+        height: calc(100vh + 53px);
+        padding: 0 10px;
+      }
+      section:nth-of-type(1) .highlight {
+        font-family: "Ubuntu-Medium";
+      }
+      section:nth-of-type(1) .text {
+        font-size: 16pt;
+        line-height: 20pt;
+        margin: 0 0 20px 0;
+        pointer-events: none;
+        z-index: 1;
+      }
+      section:nth-of-type(1) .hexagon {
+        transition: transform 0.9s ease-in-out;
+      }
+      section:nth-of-type(1) .hexagon:hover {
+        transform: rotate(540deg);
+      }
+      section:nth-of-type(1) .button {
+        margin-bottom: 53px;
+        padding: 12px 40px 12px 15px;
+        position: relative;
+      }
+      section:nth-of-type(1) .button .mdi {
+        position: absolute;
+        right: 15px;
+        top: 11px;
+        transition: transform 0.3s;
+      }
+      section:nth-of-type(1) .button:hover .mdi {
+        transform: rotate(90deg);
+      }
+      section:nth-of-type(2) .label-wrap .label {
+        margin: 20px 0 10px 0;
+      }
+      section:nth-of-type(2) .bullet-wrap {
+        height: 200px;
+        justify-content: flex-start;
+        padding: 0 7px;
+      }
+      section:nth-of-type(2) .highlight {
+        color: #009ada;
+      }
+      section:nth-of-type(2) .up-arrow {
+        height: 30px;
+        margin: 15px 0;
+      }
+      section:nth-of-type(2) .skills-wrapper {
+        align-items: flex-start;
+        width: 100%;
+      }
+      section:nth-of-type(2) .skills-wrapper .me {
+        height: 200px;
+      }
+      section:nth-of-type(2) .skills-wrapper .label {
+        margin: 20px 0 15px 0;
+      }
+      section:nth-of-type(2) .hexagon i {
+        color: #fff;
+        font-size: 34pt;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 20px;
+        z-index: 1;
+      }
+      section:nth-of-type(2) .bars-wrap {
+        margin: 50px auto 0 auto;
+        max-width: 90%;
+        width: calc(100% - 15px);
+      }
+      section:nth-of-type(2) .bars-wrap:not(.animated) .fill {
+        width: 0 !important;
+      }
+      section:nth-of-type(2) .bar {
+        align-items: flex-end;
+        background-color: #eee;
+        color: #666;
+        font-size: 7pt;
+        height: 22px;
+        margin: 0 0 12px 0;
+        position: relative;
+      }
+      section:nth-of-type(2) .bar:nth-child(1) .fill {
+        transition: 1.1s 0.2s width ease-in-out;
+      }
+      section:nth-of-type(2) .bar:nth-child(2) .fill {
+        transition: 1.2s 0.2s width ease-in-out;
+      }
+      section:nth-of-type(2) .bar:nth-child(3) .fill {
+        transition: 1.3s 0.2s width ease-in-out;
+      }
+      section:nth-of-type(2) .bar:nth-child(4) .fill {
+        transition: 1.4s 0.2s width ease-in-out;
+      }
+      section:nth-of-type(2) .bar:nth-child(5) .fill {
+        transition: 1.5s 0.2s width ease-in-out;
+      }
+      section:nth-of-type(2) .bar:nth-child(6) .fill {
+        transition: 1.6s 0.2s width ease-in-out;
+      }
+      section:nth-of-type(2) .bar:nth-child(7) .fill {
+        transition: 1.7s 0.2s width ease-in-out;
+      }
+      section:nth-of-type(2) .bar:nth-child(8) .fill {
+        transition: 1.8s 0.2s width ease-in-out;
+      }
+      section:nth-of-type(2) .bar:nth-child(9) .fill {
+        transition: 1.9s 0.2s width ease-in-out;
+      }
+      section:nth-of-type(2) .bar:nth-child(10) .fill {
+        transition: 2s 0.2s width ease-in-out;
+      }
+      section:nth-of-type(2) .bar span {
+        display: none;
+      }
+      section:nth-of-type(2) .bar.fill {
+        left: 0;
+        position: absolute;
+        top: 0;
+        background-color: #00a1a7;
+        opacity: 1;
+        padding: 0;
+      }
+      section:nth-of-type(2) .bar .tag {
+        left: 0;
+        position: absolute;
+        top: 0;
+        background-color: #04c2c9;
+        color: #fff;
+        height: 100%;
+        width: 110px;
+        width: 70px;
+      }
+      section:nth-of-type(2) .bar.secondary {
+        background-color: #04c2c9;
+      }
+      section:nth-of-type(2) .bar.secondary .tag {
+        background-color: hsla(182, 96%, 40%, 0.767);
+      }
+      section:nth-of-type(2) .bar span {
+        padding: 0 15px 0 0;
+        z-index: 1;
+      }
+      section:nth-of-type(3) {
+        background: #f5f5f5;
+      }
+      section:nth-of-type(3) .container {
+        padding: 0;
+      }
+      section:nth-of-type(3) .filter-wrap {
+        position: relative;
+        white-space: nowrap;
+      }
+      section:nth-of-type(3) .filter {
+        cursor: pointer;
+        font-size: 6pt;
+        font-weight: 600;
+        padding: 0 20px;
+        transition: background-color 0.5s;
+      }
+      section:nth-of-type(3) .float-bar {
+        bottom: 0;
+        left: 30px;
+        position: absolute;
+        top: 0;
+        background: #04c2c9;
+        border-radius: 1px;
+        height: 25px;
+        margin: auto 0;
+        overflow: hidden;
+        position: absolute;
+        transition: all 0.5s ease-in-out;
+      }
+      section:nth-of-type(3) .float-bar .row {
+        bottom: 0;
+        left: -30px;
+        position: absolute;
+        top: 0;
+        margin: auto 0;
+        transition: left 0.5s ease-in-out;
+      }
+      section:nth-of-type(3) .float-bar .row .filter {
+        color: #fff;
+      }
+      section:nth-of-type(3) .text {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+      section:nth-of-type(3) #gallery {
+        margin: 20px 0;
+      }
+      section:nth-of-type(3) #gallery .text,
+      section:nth-of-type(3) #gallery .button {
+        color: #1b242f;
+        opacity: 0;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        z-index: 2;
+      }
+      section:nth-of-type(3) #gallery .text .bold,
+      section:nth-of-type(3) #gallery .button .bold {
+        font-size: 16pt;
+      }
+      section:nth-of-type(3) #gallery .button {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        border: 2px solid hsla(182, 96%, 40%, 0.76);
+        font-size: 13pt;
+        margin: 0 auto;
+        padding: 7px 0;
+        width: 170px;
+      }
+      section:nth-of-type(3) #gallery .mix {
+        display: none;
+        position: relative;
+      }
+      section:nth-of-type(3) #gallery .mix .waypoint {
+        background: #fff;
+      }
+      section:nth-of-type(3) #gallery .mix .button:hover {
+        background: #04c2c9;
+        color: #fff;
+      }
+      section:nth-of-type(3) #gallery .mix:nth-child(1) .card {
+        background: url("media/img/thumb-3.jpg") center center/cover;
+      }
+      section:nth-of-type(3) #gallery .mix:nth-child(2) .card {
+        background: url("media/img/thumb-2.jpg") center center/cover;
+      }
+      
+      section:nth-of-type(3) #gallery .mix .card {
+        height: 240px;
+        max-width: 100%;
+        transition: opacity 0.5s;
+        width: calc(50vw - 8px);
+      }
+      section:nth-of-type(3) #gallery .mix:hover .card {
+        opacity: 0;
+      }
+      section:nth-of-type(3) #gallery .mix:hover .text {
+        cursor: default;
+        opacity: 1;
+        top: 24%;
+      }
+      section:nth-of-type(3) #gallery .mix:hover .button {
+        bottom: 24%;
+        opacity: 1;
+      }
+      section .flex-50-gt-sm {
+        display: block;
+      }
+      /* section:nth-of-type(4) {
+        padding: 130px 0 100px 0;
+        text-align: left;
+      }
+      section:nth-of-type(4) .flex.row-gt-sm,
+      section:nth-of-type(4) .flex.wrap {
+        align-items: flex-start;
+      }
+      section:nth-of-type(4) .gradient {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+      
+      section:nth-of-type(4) .label {
+        font-size: 12pt;
+        line-height: 14pt;
+        transition: color 0.3s ease-in-out;
+      }
+      section:nth-of-type(4) .thumb {
+        height: 150px;
+        margin: 0 0 15px 0;
+      }
+      section:nth-of-type(4) .date {
+        font-family: "Open sans";
+        font-size: 7pt;
+        margin: 5px 0 0 0;
+      }
+      section:nth-of-type(4) .bar {
+        background: #04c2c9;
+        height: 3px;
+        margin: 10px 0px;
+        width: 25%;
+      }
+      section:nth-of-type(4) .text {
+        font-size: 9pt;
+        line-height: 13pt;
+        max-height: 85px;
+      } */
+      section:nth-of-type(4) {
+        background: #252934;
+        color: #fff;
+        padding-top: 175px;
+      }
+      section:nth-of-type(4) .header {
+        color: #fff;
+      }
+      section:nth-of-type(4) .header-bar {
+        background: #fff;
+        margin: 25px 0 40px 0;
+        width: 110px;
+      }
+      section:nth-of-type(4) .highlight {
+        color: #04c2c9;
+        font-weight: 600;
+      }
+      section:nth-of-type(4) svg {
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
+      section:nth-of-type(4) form {
+        margin: 40px auto 0 auto;
+        min-width: 95%;
+      }
+      section:nth-of-type(4) input[type=text],
+      section:nth-of-type(4) input[type=email],
+      section:nth-of-type(4) textarea {
+        background: #1e242c;
+        border: 0;
+        box-sizing: border-box;
+        color: #fff;
+        display: block;
+        font-size: 12pt;
+        margin-bottom: 3px;
+        outline: none;
+        padding: 10px 15px;
+        width: 100%;
+        resize: none;
+      }
+      section:nth-of-type(4) textarea {
+        margin-bottom: 5px;
+        min-height: 150px;
+      }
+      section:nth-of-type(4) .button {
+        background: transparent;
+        color: #fff;
+        float: right;
+        font-size: 12pt;
+        margin: 5px 0 0 0;
+        outline: 0;
+        padding: 10px 30px;
+      }
+      section:nth-of-type(4) .button:hover {
+        background: #04c2c9;
+      }
+      section:nth-of-type(4) #success {
+        height: 0;
+        overflow: hidden;
+        position: relative;
+        transition: height 0.25s;
+        width: 100%;
+      }
+      section:nth-of-type(4) #success.expand {
+        height: 36px;
+      }
+      section:nth-of-type(4) #success div {
+        background: #04c986;
+        border: 1px solid #157c59;
+        color: #157051;
+        font-size: 10pt;
+        font-weight: 600;
+        padding: 5px 0;
+      }
+      section:nth-of-type(4) #close {
+        cursor: pointer;
+        font-size: 12pt;
+        font-weight: 600;
+        padding: 5px 15px;
+        position: absolute;
+        right: 0;
+      }
+      
+      footer {
+        background: #1b242f;
+        padding: 70px 0 50px 0;
+        position: relative;
+      }
+      footer .mdi-chevron-double-up {
+        background: hsla(182, 96%, 40%, 0.753);
+        cursor: pointer;
+        font-size: 30pt;
+        height: 50px;
+        left: 0;
+        line-height: 40pt;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        top: -25px;
+        transition: background 0.5s;
+        width: 47px;
+      }
+      footer .mdi-chevron-double-up:hover {
+        background: #04c2c9;
+      }
+      footer .icon-wrap .icon {
+        background: #262f38;
+        cursor: pointer;
+        font-size: 18pt;
+        height: 55px;
+        margin: 0 15px;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+        width: 55px;
+      }
+      footer .icon-wrap .mdi {
+        color: #fff;
+        text-align: center;
+      }
+      footer .icon-wrap .mdi.mdi-codepen {
+        font-size: 20pt;
+      }
+      footer .icon-wrap .icon:hover {
+        background: #04c2c9;
+        box-shadow: 0 0 0 3px rgba(4, 94, 201, 0.1);
+        transform: scale(0.9);
+      }
+      footer .icon-wrap .icon:hover .mdi {
+        color: #fff;
+      }
+      footer .icon-wrap .icon:hover .mdi {
+        -webkit-animation: toBottomFromTop 0.3s forwards;
+        -moz-animation: toBottomFromTop 0.3s forwards;
+        animation: toBottomFromTop 0.3s forwards;
+      }
+      footer .footnote {
+        color: #8f9aa7;
+        font-size: 10pt;
+        margin-top: 35px;
+        opacity: 0.6;
+      }
+      footer .footnote .highlight {
+        color: #04c2c9;
+        font-family: "Open Sans";
+      }
+      
+      @media screen and (max-width: 400px) {
+        section:nth-of-type(3) #gallery .mix .card {
+          width: 100vw;
+        }
+      }
+      @media screen and (min-width: 600px) {
+        body {
+          font-size: 12pt;
+        }
+        .container {
+          padding: 0 20px;
+        }
+        .header {
+          font-size: 30pt;
+        }
+        .header-bar {
+          margin: 25px 0 100px 0;
+        }
+        .label {
+          font-size: 18pt;
+        }
+        .hex-wrap {
+          height: 100px;
+          width: 100px;
+        }
+        .slide,
+        .carousel-wrap {
+          height: 450px;
+        }
+        .mdi-chevron-left,
+        .mdi-chevron-right {
+          font-size: 25pt !important;
+        }
+        .modal-wrap .modal {
+          height: initial;
+          top: -6vh;
+        }
+        .modal-wrap .info-box {
+          padding: 35px 60px 90px 25px;
+        }
+        .modal-wrap .title {
+          font-size: 22pt;
+          line-height: 30pt;
+        }
+        .modal-wrap .tag {
+          font-size: 11pt;
+        }
+        .modal-wrap .detail {
+          font-size: 11pt;
+          line-height: 18pt;
+          margin-top: 15px;
+        }
+        .modal-wrap .close {
+          right: 25px;
+        }
+        .modal-wrap .button {
+          left: 25px;
+        }
+        nav .link-wrap {
+          background: none;
+          height: initial;
+          overflow: visible;
+          position: initial;
+          text-align: left;
+        }
+        nav .link-wrap .visible {
+          height: initial;
+        }
+        nav .link-wrap div {
+          display: inline;
+          font-size: initial;
+          margin: 0 20px;
+          padding: initial;
+        }
+        nav .link-wrap div:first-child {
+          padding: 0;
+        }
+        nav .mdi-menu {
+          display: none;
+        }
+        section {
+          line-height: 18pt;
+          padding: 100px 0 130px 0;
+        }
+        section .container {
+          padding: 0 10px;
+        }
+        section:nth-of-type(1) .text {
+          font-size: 32pt;
+          line-height: 36pt;
+        }
+        section:nth-of-type(1) .button {
+          padding: 12px 50px 12px 20px;
+        }
+        section:nth-of-type(1) .button .mdi {
+          top: 16px;
+        }
+        section:nth-of-type(2) .label-wrap .label {
+          margin: 15px 0 5px 0;
+        }
+        section:nth-of-type(2) .label-wrap > div {
+          padding: 0 15px;
+        }
+        section:nth-of-type(2) .bullet-wrap {
+          height: 230px;
+        }
+        section:nth-of-type(2) .skills-wrapper > .flex:first-child {
+          padding: 0 50px 0 50px;
+        }
+        section:nth-of-type(2) .skills-wrapper .me {
+          height: 250px;
+        }
+        section:nth-of-type(2) .bar {
+          font-size: 11pt;
+          height: 28px;
+          margin: 0 0 15px 0;
+        }
+        section:nth-of-type(2) .bar span {
+          display: initial;
+        }
+        section:nth-of-type(2) .bar .tag {
+          width: 110px;
+        }
+        section:nth-of-type(2) .hexagon i {
+          font-size: 40pt;
+        }
+        section:nth-of-type(3) .filter {
+          font-size: 11pt;
+          margin: 0 15px;
+          padding: 0 30px;
+        }
+        section:nth-of-type(3) .float-bar {
+          height: 30px;
+        }
+        section:nth-of-type(3) #gallery .mix .card {
+          height: 300px;
+        }
+        /* section:nth-of-type(4) {
+          padding: 130px 0 180px 0;
+        }
+        section:nth-of-type(4) .label {
+          font-size: 16pt;
+          line-height: 22pt;
+        }
+        section:nth-of-type(4) .date {
+          font-size: 8.5pt;
+        }
+        section:nth-of-type(4) .bar {
+          margin: 15px 0px;
+        }
+        section:nth-of-type(4) .text {
+          font-size: 11pt;
+          line-height: 15pt;
+        }
+        section:nth-of-type(4) .thumb {
+          height: 200px;
+        } */
+        section:nth-of-type(4) form {
+          min-width: 500px;
+        }
+      }
+      @media screen and (min-width: 960px) {
+        .waypoint {
+          opacity: 0;
+        }
+        .animated.waypoint#gallery {
+          opacity: 1;
+        }
+        .animated.waypoint#gallery .mix:nth-child(1) > div {
+          animation: slideUp 0.75s 0.1s ease both;
+          opacity: 0;
+        }
+        .animated.waypoint#gallery .mix:nth-child(2) > div {
+          animation: slideUp 0.75s 0.2s ease both;
+          opacity: 0;
+        }
+        .animated.waypoint#gallery .mix:nth-child(3) > div {
+          animation: slideUp 0.75s 0.3s ease both;
+          opacity: 0;
+        }
+        .animated.waypoint#gallery .mix:nth-child(4) > div {
+          animation: slideUp 0.75s 0.4s ease both;
+          opacity: 0;
+        }
+        .animated.waypoint#gallery .mix:nth-child(5) > div {
+          animation: slideUp 0.75s 0.5s ease both;
+          opacity: 0;
+        }
+        .animated.waypoint#gallery .mix:nth-child(6) > div {
+          animation: slideUp 0.75s 0.6s ease both;
+          opacity: 0;
+        }
+        .animated.waypoint#gallery .mix:nth-child(7) > div {
+          animation: slideUp 0.75s 0.7s ease both;
+          opacity: 0;
+        }
+        .animated.waypoint#gallery .mix:nth-child(8) > div {
+          animation: slideUp 0.75s 0.8s ease both;
+          opacity: 0;
+        }
+        .animated.waypoint#gallery .mix:nth-child(9) > div {
+          animation: slideUp 0.75s 0.9s ease both;
+          opacity: 0;
+        }
+        .animated.slide-up {
+          animation: slideUp 0.75s ease both;
+        }
+        .animated.slide-down {
+          animation: slideDown 0.75s ease both;
+        }
+        .animated.slide-in-left {
+          animation: slideInLeft 0.75s ease both;
+        }
+        .animated.slide-in-right {
+          animation: slideInRight 0.75s ease both;
+        }
+        .animated.flip-in-x {
+          animation: flipInX 0.75s ease both;
+        }
+        .animated.fade-in {
+          animation: fadeIn 0.75s ease both;
+        }
+        .animated.pop-in {
+          animation: popIn 1s both;
+        }
+        .canvas {
+          background: #252934;
+        }
+        .button {
+          font-size: 16pt;
+        }
+        .flex.row-gt-sm {
+          flex-direction: row;
+        }
+        .flex-50-gt-sm {
+          box-sizing: border-box;
+          -webkit-flex: 1 1 50%;
+          -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+          max-height: 100%;
+          max-width: 50%;
+        }
+        section:nth-of-type(2) .bars-wrap {
+          margin: 0 0 0 0;
+        }
+        section:nth-of-type(2) .skills-wrapper {
+          margin: 50px 0 0 0;
+        }
+        section:nth-of-type(2) .skills-wrapper .me {
+          margin: 0;
+        }
+        section:nth-of-type(2) .bar {
+          max-width: 90%;
+        }
+        section:nth-of-type(2) .bullet-wrap {
+          height: intial;
+          margin: 0;
+          padding: 0 10px;
+        }
+        section:nth-of-type(3) #gallery .mix .card {
+          width: 390px;
+        }
+        section:nth-of-type(3) .filter {
+          font-size: 13pt;
+          margin: 0 25px;
+          padding: 0 40px;
+        }
+      }
+      </style>
+
+    <!-- HOSTED JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+
+    <!-- LOCAL JS -->
+    <script src="./static/js/pt.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    <script src="./static/js/modal.js"></script>
+
 </head>
 <body>
-    <header><h1>Rémy Santoriello</h1></header>
-    <div>Liens vers mes projets :</div>
-    <ul>
-        <li><a href="http://santoriellor.pythonanywhere.com/">Site de création de rapports</a> - <a href="https://github.com/Santoriellor/django-report-editor">Github</a></li>
-    </ul>
+    <div class="overflow-wrap">
+        <!-- HOME -->
+        <div class="modal-wrap flex">
+          <div class="mask"></div>
+          <div class="modal" id="modal" style="max-width: 700px;">
+            <div class="carousel-wrap" style="width: 700px;">
+              <div class="window">
+                <div id="carousel" style="left: -700px;">
+                  <div class="slide" style="width: 700px;"></div>
+                  <div class="slide" style="width: 700px;"></div>
+                  <div class="slide" style="width: 700px;"></div>
+                </div>
+                <i class="mdi mdi-chevron-left" id="prev"></i>
+                <i class="mdi mdi-chevron-right" id="next"></i>
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="title"></div>
+              <div class="tag"></div>
+              <div class="detail"></div>
+              <a href="#" target="_blank"><div class="button"><i class="mdi mdi-open-in-new"></i>VIEW SITE</div></a>
+            </div>
+            <i class="close mdi mdi-close"></i>
+          </div>
+        </div>
+  
+        <section id="home" class="flex height-fix">
+            <div id="pt" class="canvas"><canvas id="canvas" width="1024" height="796" style="width: 1024px; height: 796px;"></canvas></div>
+            <div class="flex">
+                <div class="text">
+                Hello, I'm <span class="highlight">Rémy Santoriello</span>.
+                <br>
+                I'm a full-stack software developer.
+                </div>
+    
+                <div class="button page-link" dest="about">View my work <i class="mdi mdi-arrow-right"></i>
+                </div>
+
+                <nav class="flex desk">
+                    <div class="link-wrap">
+                    <div class="page-link active" dest="home">home</div>
+                    <div class="page-link" dest="about">about</div>
+                    <div class="page-link" dest="portfolio">portfolio</div>
+                    <div class="page-link" dest="contact">contact</div>
+                    </div>
+                    <i class="mdi mdi-menu"></i>
+                </nav>
+            </div>
+        </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container flex">
+          <div class="header waypoint animated slide-in-left" data-animation="slide-in-left">
+            ABOUT
+          </div>
+          <div class="header-bar waypoint animated slide-in-left" data-animation="slide-in-left" data-delay=".5s" style="animation-delay: 0.5s;"></div>
+
+          <div class="skills-wrapper flex row-gt-sm">
+            <div class="flex flex-50-gt-sm waypoint animated slide-in-left" data-animation="slide-in-left">
+              <img src="./media/img/me.png" class="me">
+        
+              <div class="label bold">About me</div>
+              <div>
+                I was a full-stack developer / software tester for
+                <a class="highlight" href="https://www.defense.gouv.fr/terre/section-technique-larmee-terre-stat" target="_blank">the French Army</a>
+                in Paris, France.
+                <br>
+                After a long break sailing through Europe, I'm coming back to my roots and programming.
+                <br>
+                I like responsive and dynamic user interfaces, and intuitive applications.
+                <br>
+                <span class="page-link highlight" dest="contact">Contact me to discuss work opportunity.</span>
+              </div>
+            </div>
+
+            <div class="flex flex-50-gt-sm waypoint bars-wrap animated slide-in-right" data-animation="slide-in-right">
+              <div class="bar flex">
+                <div class="bar fill" style="width:85%">
+                  <div class="tag bold flex">CSS</div>
+                </div>
+              </div>
+
+              <div class="bar flex">
+                <div class="bar fill" style="width:90%">
+                  <div class="tag bold flex">HTML</div>
+                </div>
+              </div>
+
+              <div class="bar flex">
+                <div class="bar fill" style="width:90%">
+                  <div class="tag bold flex">Python</div>
+                </div>
+              </div>
+
+              <div class="bar flex">
+                <div class="bar fill" style="width:80%">
+                  <div class="tag bold flex">JavaScript</div>
+                </div>
+              </div>
+
+              <div class="bar flex">
+                <div class="bar fill" style="width:80%">
+                  <div class="tag bold flex">PHP</div>
+                </div>
+              </div>
+
+              <div class="bar flex">
+                <div class="bar fill" style="width:65%">
+                  <div class="tag bold flex">Django</div>
+                </div>
+              </div>
+
+              <div class="bar flex">
+                <div class="bar fill" style="width:70%">
+                  <div class="tag bold flex">MySQL</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section class="flex" id="portfolio">
+        <div class="header waypoint" data-animation="slide-in-right">
+          PROJECTS
+        </div>
+        <div class="header-bar waypoint" data-animation="slide-in-right" data-delay=".3s" style="animation-delay: 0.3s;"></div>
+
+        <div class="filter-wrap waypoint" data-animation="fade-in">
+          <div class="flex row">
+            <div class="filter active" data-filter="all">ALL</div>
+            <div class="filter" data-filter=".python">Python/Django</div>
+            <div class="filter" data-filter=".php">PHP/MySQL</div>
+          </div>
+          <div class="float-bar" style="left: 25px; width: 112px;">
+            <div class="flex row" style="left: -25px;">
+              <div class="filter active" data-filter="all">ALL</div>
+              <div class="filter" data-filter=".python">Python/Django</div>
+              <div class="filter" data-filter=".php">PHP/MySQL</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="gallery" class="container flex row wrap waypoint">
+          <div class="mix python" data-my-order="1" style="display: inline-block;" data-bound="">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Système d'information régimentaire (SIR)</div>
+                <span class="highlight">Software testing / PHP / MySQL</span>
+              </div>
+              <div class="button" id="sir">LEARN MORE</div>
+            </div>
+          </div>
+
+          <div class="mix php" data-my-order="1" style="display: inline-block;" data-bound="">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Workshop report creator</div>
+                <span class="highlight">Python / Django</span>
+              </div>
+              <div class="button" id="workshop">LEARN MORE</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+          <path d="M0 0 L50 100 L100 0 Z" fill="#f5f5f5" stroke="#f5f5f5"></path>
+        </svg>
+        <div class="container flex">
+          <div class="header waypoint" data-animation="slide-in-left">
+            CONTACT
+          </div>
+          <div class="header-bar waypoint" data-animation="slide-in-right" data-delay=".25s" style="animation-delay: 0.25s;"></div>
+          <div class="highlight waypoint" data-animation="slide-in-right" data-delay=".5s" style="animation-delay: 0.5s;">
+            Have a question or want to work together?
+          </div>
+          <form class="waypoint" data-animation="pop-in" data-delay=".5s" id="contact-form" action="https://api.web3forms.com/submit" method="POST" style="animation-delay: 0.5s;">
+            <input placeholder="Name" type="text" name="name" required="">
+            <input type="hidden" name="access_key" value="c9e4e021-c095-4eb8-95f2-a93d49403bd6">
+            <input placeholder="Enter email" type="email" name="email" required="">
+            <textarea placeholder="Your Message" type="text" name="message"></textarea>
+            <div id="success">
+              <div>
+                Your message was sent successfully. Thanks!<span id="close" class="mdi mdi-close"></span>
+              </div>
+            </div>
+            <input class="button" type="submit" id="submit" value="SUBMIT">
+            <p id="result" classname="error"></p>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <i class="mdi mdi-chevron-double-up page-link" dest="home"></i>
+
+        <div class="icon-wrap flex row">
+        <!-- link linkedin -->
+          <a href="https://www.linkedin.com/in/rémy-santoriello" target="_blank">
+            <div class="flex icon" id="icon-2">
+              <i class="mdi mdi-linkedin"></i>
+            </div>
+          </a>
+        <!-- link github -->
+          <a href="https://github.com/Santoriellor/" target="_blank">
+            <div class="flex icon" id="icon-3">
+              <i class="mdi mdi-github-box"></i>
+            </div>
+          </a>
+        </div>
+        <div class="info-box">
+          <div class="footnote">
+            REMY SANTORIELLO <span class="highlight">©2023</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div id="preload">
+      <img src="./media/img/me.png">
+      <img src="./media/img/thumb-1.jpg">
+      <img src="./media/img/thumb-2.jpg">
+      <img src="./media/img/thumb-3.jpg">
+      <img src="./media/img/slides/sir-0.jpg">
+      <img src="./media/img/slides/sir-1.jpg">
+      <img src="./media/img/slides/sir-2.jpg">
+      <img src="./media/img/slides/workshop-0.jpg">
+      <img src="./media/img/slides/workshop-1.jpg">
+      <img src="./media/img/slides/workshop-2.jpg">
+    </div>
+
+
+<!-- <script src="./static/js/canvas.js"></script> -->
 </body>
+
+<!-- <li><a href="http://santoriellor.pythonanywhere.com/">Site de création de rapports</a> - <a href="https://github.com/Santoriellor/django-report-editor">Github</a></li> -->
+
 </html>
