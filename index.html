@@ -176,7 +176,6 @@
       }
       
       .me {
-        /* clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%); */
         border-radius: 50%;
         background: url("./media/img/me.png");
         height: 220px;
@@ -322,12 +321,23 @@
         color: #37f4fb;
       }
       
+      .carousel-wrap {
+        height: 250px;
+        margin: 0 auto;
+        position: relative;
+      }
+
       .window {
         background: #222;
         overflow: hidden;
         position: relative;
       }
       
+      #carousel {
+        position: relative;
+        top: 0;
+        width: 10000px;
+      }
       .slide {
         cursor: pointer;
         display: flex;
@@ -432,7 +442,7 @@
         position: relative;
       }
       .modal-wrap .button {
-        background: #e31b6d;
+        background: #04c2c9;
         border: 0;
         bottom: 20px;
         color: #fff;
@@ -452,7 +462,10 @@
       }
       .modal-wrap .button:hover {
         background: #fff;
-        color: #e31b6d;
+        color: #04c2c9;
+      }
+      .modal-wrap .carousel {
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
       }
       .modal-wrap.visible {
         pointer-events: initial;
@@ -513,11 +526,6 @@
       section:nth-of-type(2) .label-wrap .label {
         margin: 20px 0 10px 0;
       }
-      section:nth-of-type(2) .bullet-wrap {
-        height: 200px;
-        justify-content: flex-start;
-        padding: 0 7px;
-      }
       section:nth-of-type(2) .highlight {
         color: #009ada;
       }
@@ -572,15 +580,6 @@
       }
       section:nth-of-type(2) .bar:nth-child(7) .fill {
         transition: 1.7s 0.2s width ease-in-out;
-      }
-      section:nth-of-type(2) .bar:nth-child(8) .fill {
-        transition: 1.8s 0.2s width ease-in-out;
-      }
-      section:nth-of-type(2) .bar:nth-child(9) .fill {
-        transition: 1.9s 0.2s width ease-in-out;
-      }
-      section:nth-of-type(2) .bar:nth-child(10) .fill {
-        transition: 2s 0.2s width ease-in-out;
       }
       section:nth-of-type(2) .bar span {
         display: none;
@@ -901,6 +900,9 @@
           width: 100px;
         }
         .slide,
+        .carousel-wrap {
+          height: 450px;
+        }
         .mdi-chevron-left,
         .mdi-chevron-right {
           font-size: 25pt !important;
@@ -974,9 +976,6 @@
         }
         section:nth-of-type(2) .label-wrap > div {
           padding: 0 15px;
-        }
-        section:nth-of-type(2) .bullet-wrap {
-          height: 230px;
         }
         section:nth-of-type(2) .skills-wrapper > .flex:first-child {
           padding: 0 50px 0 50px;
@@ -1080,11 +1079,6 @@
         section:nth-of-type(2) .bar {
           max-width: 90%;
         }
-        section:nth-of-type(2) .bullet-wrap {
-          height: intial;
-          margin: 0;
-          padding: 0 10px;
-        }
         section:nth-of-type(3) #gallery .mix .card {
           width: 390px;
         }
@@ -1095,11 +1089,6 @@
         }
       }
       </style>
-
-    <!-- Parallax -->
-    <!-- <link rel="stylesheet" href="./static/css/styles.css"> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://matthew.wagerfield.com/parallax/deploy/jquery.parallax.js"></script> -->
 
     <!-- HOSTED JS -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script> -->
@@ -1114,6 +1103,34 @@
 </head>
 <body>
     <div class="overflow-wrap">
+        <!-- MODAL floating box -->
+        <div class="modal-wrap flex">
+            <div class="mask"></div>
+            <div class="modal" id="modal" style="max-width: 1134px;">
+              <div class="carousel-wrap" style="width: 1134px;">
+                <div class="window">
+                  <div id="carousel" style="left: -1134px;">
+                    <!-- portfolio slides -->
+                    <div class="slide" style="width: 1134px;"></div>
+                    <div class="slide" style="width: 1134px;"></div>
+                    <div class="slide" style="width: 1134px;"></div>
+                  </div>
+                  <i class="mdi mdi-chevron-left" id="prev"></i>
+                  <i class="mdi mdi-chevron-right" id="next"></i>
+                </div>
+              </div>
+              <div class="info-box">
+                <div class="title"></div>
+                <div class="tag"></div>
+                <div class="detail"></div>
+                <a href="#" target="_blank"><div class="button">
+                    <i class="mdi mdi-open-in-new"></i>VIEW SITE
+                  </div></a>
+              </div>
+              <i class="close mdi mdi-close"></i>
+            </div>
+        </div>
+
         <!-- HOME -->
         <section id="home" class="flex height-fix">
             <div class="flex">
@@ -1196,13 +1213,13 @@
               </div>
 
               <div class="bar flex">
-                <div class="bar fill" style="width:65%">
+                <div class="bar fill" style="width:70%">
                   <div class="tag bold flex">Django</div>
                 </div>
               </div>
 
               <div class="bar flex">
-                <div class="bar fill" style="width:70%">
+                <div class="bar fill" style="width:65%">
                   <div class="tag bold flex">MySQL</div>
                 </div>
               </div>
@@ -1235,7 +1252,7 @@
         </div>
 
         <div id="gallery" class="container flex row wrap waypoint">
-          <div class="mix python" data-my-order="1" style="display: inline-block;" data-bound="">
+          <div class="mix php" data-my-order="1" style="display: inline-block;" data-bound="">
             <div>
               <div class="card"></div>
               <div class="text">
@@ -1246,7 +1263,7 @@
             </div>
           </div>
 
-          <div class="mix php" data-my-order="1" style="display: inline-block;" data-bound="">
+          <div class="mix python" data-my-order="1" style="display: inline-block;" data-bound="">
             <div>
               <div class="card"></div>
               <div class="text">
