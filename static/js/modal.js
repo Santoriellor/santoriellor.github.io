@@ -69,7 +69,7 @@ $(document).ready(function() {
           navigator.userAgent
         )
       ) {
-        slideWidth = $(window).innerWidth();
+        slideWidth = $(window).innerWidth() * 0.6;
       }
       $('.carousel-wrap, .slide').css('width', slideWidth);
       $('.modal').css('max-width', slideWidth);
