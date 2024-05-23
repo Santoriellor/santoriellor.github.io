@@ -20,7 +20,7 @@ $(document).ready(function() {
         tag: 'Price comparator using Python',
         detail:
           'This website is scraping data from different online shop and presenting them for the user to compare prices.',
-        link: 'http://195.179.228.168/products'
+        link: 'https://195.179.228.168/products'
       },
     };
   
