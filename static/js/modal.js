@@ -13,7 +13,14 @@ $(document).ready(function() {
         tag: 'Workshop report creator editor.',
         detail:
           'This website is meant as a tool for workskop to digitalize input from work report in order to ease the process of editing invoice and following stocks.',
-        link: 'http://santoriellor.pythonanywhere.com/'
+        link: 'http://workshop.santoriello.ch/'
+      },
+      comparator: {
+        title: 'Price comparator',
+        tag: 'Price comparator using Python',
+        detail:
+          'This website is scraping data from different online shop and presenting them for the user to compare prices.',
+        link: 'https://comparator.santoriello.ch'
       },
     };
   
