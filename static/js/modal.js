@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(document).ready(function() {
     // MODAL
     var modalText = {
@@ -129,8 +128,7 @@ $(document).ready(function() {
       });
     }
   });
-  
-=======
+
 $(document).ready(function() {
     // MODAL
     var modalText = {
@@ -261,5 +259,3 @@ $(document).ready(function() {
       });
     }
   });
-  
->>>>>>> c36eb9a749c68d64245b4013bce8a92d922cf64a
